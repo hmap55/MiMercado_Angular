@@ -1,0 +1,13 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<div class="contenedor">
+    <div class="tarjeta" *ngFor="let prod of producto;">
+        <a routerLink="/producto/{{prod.id}}" >
+        <img src="assets/{{prod.url}}" alt="">
+        <h4>{{prod.nombre}}</h4>
+        <h3><sup>$</sup>{{prod.precio}}</h3>
+        </a>
+    </div>
+    
+    
+</div>

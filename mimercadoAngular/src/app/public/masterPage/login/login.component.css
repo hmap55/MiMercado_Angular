@@ -1,0 +1,68 @@
+*{
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+
+.contenedor{
+    background-color:rgb(152, 202, 255);
+    margin: 0;
+    padding: 10px;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.encabezado h1{
+    color: white;
+    font-size: 310%;
+}
+.Registro{
+    width: 60%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2% 0% 20% 2%;
+    margin: 0 auto 5%;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.label_titulos{
+    display: inline-block;
+    width: 30%;
+    font-size: 150%;
+    margin-bottom: 16px;
+}
+.formulario_input{
+    display: inline-block;
+    background-color: rgb(218, 245, 252);
+    width: 60%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 110%;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.botones{
+    width: 60%;
+    margin: auto 100px;
+    background-color: steelblue;
+    border-color: steelblue;
+    color: white;
+    font-weight: bolder;
+    box-shadow: 0 1px 1px rgba(149, 166, 216, 0.925);
+    padding: 2% 1% 2% 1%;
+    font-size: 16px;
+    border-radius: 20px;
+    transition:background .5s,color .5s;
+
+}
+.botones:hover{
+    transform: translatey(-1px);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: steelblue;
+    box-shadow: 0 12px 16px rgba(149, 166, 216, 0.925);
+}
+

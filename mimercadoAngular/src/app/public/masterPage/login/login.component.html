@@ -1,0 +1,27 @@
+<div class="contenedor">
+<header>
+    <div class="img">
+    <img src="/assets/imagenes/img/MiMercado1.jpeg" alt="MiMercado" width="200" height="150"></div>
+    <br />
+    <h1 class="Titulo_principal">Bienvenidos a MiMercado</h1>
+</header>
+<main>
+    <form class="Registro" [formGroup] = "formulario" (ngSubmit) ="verificarDatos()" autocomplete="off">
+        <label class="label_titulos" for="Nombre">Nombre:</label>
+        <input class="formulario_input" type="text" name="nombre" id="nombre"placeholder="Ingrese su nombre de usuario" required
+        formControlName="nombre"
+        [class.is-invalid]="nombreNoValido"
+        /> <span *ngIf="nombreNoValido" class="text-danger"> Debe ingresar nombre de usuario</span>
+        <br />
+        <label class="label_titulos" for="contaseña">Contraseña:</label>
+        <input class="formulario_input" type="password" name="contaseña"id="contraseña"placeholder="Ingrese su contraseña" required
+        formControlName="password"
+        [class.is-invalid]="passwordNoValido"
+        /> <span *ngIf="passwordNoValido" class="text-danger"> Debe ingresar la contraseña</span> <br /><br />
+        <div class="boton"><a href=""><input class="botones" type="submit" value="Iniciar sesion"/></a></div>
+    </form>
+    <div class="text-danger" *ngIf="error">
+      los datos ingresados no son correctos
+    </div>
+</main>
+</div>

@@ -1,0 +1,62 @@
+<div class="contenedor">
+<header>
+    <div class="encabezado">
+    <img src="assets/imagenes/img/MiMercado1.jpeg" alt="MiMercado" width="200" height="150">
+    <br />
+    <h1>Bienvenidos a MiMercado</h1>
+</div>
+</header>
+<main>
+    <form class="Registro" [formGroup]="formulario" (ngSubmit)="guardarDatos()" autocomplete="off">
+        <label class="label_titulos" for="nombres">Nombres</label>
+        <input class="formulario_input" type="text" name="nombres"id="nombre"placeholder="Ingrese sus nombres" required
+                formControlName="nombre"
+                [class.is-invalid]="nombreNoValido"/>
+                <span *ngIf="nombreNoValido" class="text-danger">Debe ingresar el nombre del usuario</span>
+                <br />
+        <label class="label_titulos" for="apellido">Apellidos</label>
+        <input class="formulario_input" type="text" name="apellido"id="apellido"placeholder="Ingrese su apellido" required  
+        formControlName="apellido"
+        [class.is-invalid]="apellidoNoValido"/>
+        <span *ngIf="apellidoNoValido" class="text-danger">Debe ingresar el apellido del usuario</span>
+        <br />
+        <label class="label_titulos" for="cedula">Cedula</label>
+        <input class="formulario_input" type="number" name="cedula"id="cedula"placeholder="Ingrese sus nombres" required 
+        formControlName="cedula"
+        [class.is-invalid]="cedulaNoValido"/>
+        <span *ngIf="cedulaNoValido" class="text-danger">Debe ingresar la cedula del usuario</span><br />
+        <label class="label_titulos" for="correo">Correo</label>
+        <input class="formulario_input" type="email" name="correo" id="correo" placeholder="Ingrese su correo" required 
+        formControlName="correo"
+        [class.is-invalid]="correoNoValido"/>
+        <span *ngIf="correoNoValido" class="text-danger">Debe ingresar el correo del usuario</span>
+        <br />
+        <label class="label_titulos" for="celular">Celular</label>
+        <input class="formulario_input" type="number" name="celular"id="dirección"placeholder="Ingrese su dirección" required 
+        formControlName="celular"
+        [class.is-invalid]="celularNoValido"/>
+        <span *ngIf="nombreNoValido" class="text-danger">Debe ingresar el celular del usuario</span>
+        <br />
+        <label class="label_titulos" for="contaseña">Contraseña</label>
+        <input class="formulario_input" type="password" name="contaseña"id="contraseña"placeholder="Ingrese su contraseña" required 
+        formControlName="password"
+        [class.is-invalid]="passwordNoValido"/>
+        <span *ngIf="passwordNoValido" class="text-danger">Debe ingresar la contraseña</span>
+        <br />
+        
+        <a href="inde_promos.html"><input class="botones"  type="submit" value="Registrar" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a routerLink="/login"><input class="botones" type="submit" value="Iniciar sesion"/></a>
+        </form>
+
+        <div *ngIf ="error" class="alert-info">
+            los datos son incorrectos
+        </div> 
+
+        <div *ngIf="error" class="alert-info">
+            Su registro se ha realizado con exito
+            <br>
+            por favor inicie sesion <a routerLink ="/login">Aqui</a>
+        </div>
+</main>
+
+</div>

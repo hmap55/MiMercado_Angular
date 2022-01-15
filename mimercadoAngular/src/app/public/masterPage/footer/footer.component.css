@@ -1,0 +1,157 @@
+
+/*************** footer ***********/
+
+
+footer{
+    background-color:rgb( 103, 173, 245);
+    width: 100%;
+    padding-top: 10px;
+
+}
+.container-footer{
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+.container-body{
+    display: flex;
+}
+.colum1{
+    max-width: 40%;
+    
+
+}
+
+.colum1 p{
+    font-size: 15px;
+}
+.colum2{
+    max-width: 40%;
+    margin: 0% 5% 0% 5%;
+}
+.colum2 h1{
+    font-size: 30px;
+}
+.colum3{
+    max-width: 400px;
+    margin: auto;
+}
+.colum3 h1{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.redes-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes-container ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
+.redes-container ul li a{
+    display: block;
+    padding: 0 10px;
+    background-color: #333;
+    color: #ffff;
+    line-height: 50px;
+    font-size: 25px;
+    box-shadow: 0 3px 5px 0px rgb(0, 0, 0, .1s);
+    transition: .2s;
+}
+.redes-container ul:hover a{
+    filter:blur(0.7px);
+}
+.redes-container ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgb(0, 0, 0, .4);
+    filter: none;
+}
+.redes-container ul li .facebook:hover{
+    background-color: #3b5998;
+}
+.redes-container ul li .instagram:hover{
+    background-color: #e4405f;
+}
+.redes-container ul li .twitter:hover{
+    background-color: #55acee;
+}
+.container-copyright{
+    background-color: rgb(68, 155, 241);
+    width: 100%;
+    padding-top: 1%;
+}
+
+@media (max-width: 540px) {
+    
+    
+    .container-footer{
+        width: 100%;
+        margin: auto;
+    }
+    .container-body{
+        display: block;
+    }
+    .colum1{
+        max-width: 100%;
+        padding: 0px 15px 25px 15px;
+    }
+    .colum1 h1{
+        font-size: 20px;
+    }
+    .colum1 p{
+        font-size: 13px;
+    }
+    .row{
+        font-size: 12px;
+    }
+    .colum2{
+        max-width: 100%;
+        margin: 0% 5% 0% 5%;
+        margin: auto;
+        background-color: rgb(105, 166, 226);
+        padding: 10px 0 10px 0;
+    }
+    .logo{
+        text-align: center;
+    }
+    .logo2{
+        width: 100px;
+        height: 100px;
+    }
+    .colum2 h1{
+        color: #ffff;
+        font-size: 20px;
+    }
+    .colum3{
+        max-width: 100%;
+    }
+    .colum3 h1{
+        font-size: 20px;
+    }
+    .redes-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .redes-container ul li{
+        margin: 0 40px 0 2px;
+    }
+    .redes-container ul li a{
+        line-height: 35px;
+        font-size: 30px;
+    }
+    .container-copyright{
+        background-color: rgb(68, 155, 241);
+        width: 100%;
+        font-size: 12px;
+            
+    }
+        
+        
+}

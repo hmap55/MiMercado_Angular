@@ -1,0 +1,28 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<main class="main-producto" >
+    <div class="main-info-producto">
+        <div *ngIf="producto.id==0" >
+            
+            Cargando datos del producto
+        </div>
+        <div class="main-img-producto" id="imagen">
+            <img src="assets/{{producto.url}}" alt=""/>
+        </div>
+        <div class="info">
+            <h3 id="producto-codigo">cod: 000{{producto.id}}</h3>
+            <h3 id="producto-codigo">seccion: {{producto.seccion}}</h3>
+            <p id="main-producto-descripcion">{{producto.nombre}}</p>
+            <h3 >$ <span id="producto-precio">{{producto.precio}} </span> </h3>
+            <p id="main-producto-precio-unitario">gr a $3.00</p>
+
+            <form class="producto-compra" [formGroup]="formulario" (ngSubmit)="guardarDatos()">
+                <button id="producto-mas" onclick="aumentar()">+</button>
+                <input type="number" formControlName="cantidad"  id="producto-cantidad" value="0" required>
+                <button id="producto-menos" onclick="disminuir()">-</button>
+                <button id="producto-agregar" (click) = "addCarrito()" >AGREGAR AL CARRITO</button>
+            </form>
+        </div>
+    </div>
+</main>
+
